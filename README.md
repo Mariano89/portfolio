@@ -1,1 +1,2 @@
-## mariano89.github.io
+Deploy the site by running
+### `npm run deploy`
