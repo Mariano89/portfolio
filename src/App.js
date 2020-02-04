@@ -1,6 +1,6 @@
 import React from 'react';
 import face from './images/face.png';
-import './styles/App.css';
+import './styles/css/main.css';
 
 function App() {
   return (

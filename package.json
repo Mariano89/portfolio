@@ -4,21 +4,25 @@
   "private": true,
   "homepage": "https://mariano89.github.io/mariano89.github.io/",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "gh-pages": "^2.2.0",
+    "gsap": "^3.1.1",
+    "node-sass-chokidar": "^1.4.0",
+    "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
+    "sass": "^1.25.0",
     "serialize-javascript": "^2.1.2"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar --output-style compressed ./src/styles/scss --include-path ./node_modules src/ -o src/styles/css",
+    "watch-css": "npm run build-css && node-sass-chokidar --output-style compressed ./src/styles/scss --include-path ./node_modules src/ -o src/styles/css --watch",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

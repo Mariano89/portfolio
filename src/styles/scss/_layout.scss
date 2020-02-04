@@ -1,3 +1,9 @@
+body {
+  // margin: 0;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
   text-align: center;
 }
@@ -29,19 +35,12 @@
   bottom: 25px;
   color: #61dafb;
   text-decoration: none;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  @include code;
 }
 
 @media only screen and (max-width: 600px) {
   .App-logo {
     height: 70vmin;
-} 
+  }
 }
+
