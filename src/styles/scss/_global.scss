@@ -92,11 +92,20 @@ h1, h2, h3, h4 {
   TRANSITIONS
 ======================================== */
 
-@keyframes App-logo-spin {
+@keyframes logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes scale-face {
+  from {
+    transform:scale(0.1);
+  }
+  to {
+    transform:scale(1);
   }
 }

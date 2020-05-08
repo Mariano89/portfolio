@@ -7,7 +7,7 @@ main#home {
   font-size: calc(10px + 2vmin);
   color: white;
   .logo-container {
-      transform: scale(0.1);
+     animation: scale-face 1s ease-in-out;
     .logo {
       height: 40vmin;
       pointer-events: none;
@@ -15,7 +15,7 @@ main#home {
   }
   @media (prefers-reduced-motion: no-preference) {
     .logo {
-      animation: App-logo-spin infinite 20s linear;
+      animation: logo-spin infinite 20s linear;
     }
   }
   @media only screen and (max-width: 600px) {
