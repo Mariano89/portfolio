@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
 import face from '../images/face.png';
-import { gsap } from 'gsap';
-import { CSSPlugin } from 'gsap/CSSPlugin';
-
-// Force CSSPlugin to not get dropped during build
-gsap.registerPlugin(CSSPlugin);
+import { TimelineLite, CSSPlugin } from "gsap/all";
 
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.myFace = null;
-    this.myTween = new gsap.timeline({paused:true});
+    this.myTween = new TimelineLite({paused:false});
   }
-
 
   componentDidMount() {
     this.myTween.to(this.myFace, 1, {
       transform: "scale(1)",
       ease: "Power3.easeInOut"
-    }).play();
+    });
   }
 
   render() {
