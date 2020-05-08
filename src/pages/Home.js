@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import face from '../images/face.png';
-import { TimelineLite, CSSPlugin } from "gsap/all";
+import { gsap } from 'gsap';
+import { CSSPlugin } from 'gsap/CSSPlugin';
+
+// Force CSSPlugin to not get dropped during build
+gsap.registerPlugin(CSSPlugin);
 
 class Home extends Component {
 
   constructor(props) {
     super(props);
     this.myFace = null;
-    this.myTween = new TimelineLite({paused:true});
+    this.myTween = new gsap.timeline({paused:true});
   }
+
 
   componentDidMount() {
     this.myTween.to(this.myFace, 1, {
@@ -20,7 +25,6 @@ class Home extends Component {
   render() {
     return (
       <main id="home">
-        <div>
           <div className="logo-container" ref={div => this.myFace = div}>
             <img 
               src={face} 
@@ -39,7 +43,6 @@ class Home extends Component {
               email
             </a>
           </div>
-        </div>
       </main>
     )
   }
