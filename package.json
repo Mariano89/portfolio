@@ -2,7 +2,7 @@
   "name": "mariano89.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mariano89.github.io/mariano89.github.io/",
+  "homepage": "https://mariano89.github.io/portfolio/",
   "dependencies": {
     "gh-pages": "^2.2.0",
     "gsap": "^3.1.1",
@@ -17,8 +17,10 @@
   "scripts": {
     "build-css": "node-sass-chokidar --output-style compressed ./src/styles/scss --include-path ./node_modules src/ -o src/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar --output-style compressed ./src/styles/scss --include-path ./node_modules src/ -o src/styles/css --watch",
+    // "predeploy": "npm run build",
+    // "deploy": "gh-pages -b master -d build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build"
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
