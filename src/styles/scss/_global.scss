@@ -59,6 +59,20 @@ h1, h2, h3, h4 {
   transform: translate(-50%, -50%);
 }
 
+@mixin vertCenter {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horzCenter {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 
 /* =========================================
   COMPONENTS
