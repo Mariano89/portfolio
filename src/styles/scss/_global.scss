@@ -82,11 +82,10 @@ h1, h2, h3, h4 {
 /* =========================================
   FONTS
 ======================================== */
+
 @mixin code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-
 
 /* =========================================
   TRANSITIONS
@@ -94,10 +93,16 @@ h1, h2, h3, h4 {
 
 @keyframes logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(-30deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes stop-spin {
+  to {
+    transform: rotate(-720deg);
   }
 }
 
@@ -107,5 +112,14 @@ h1, h2, h3, h4 {
   }
   to {
     transform:scale(1);
+  }
+}
+
+@keyframes shrink-face {
+  from {
+    transform:scale(1);
+  }
+  to {
+    transform:scale(0.1);
   }
 }
