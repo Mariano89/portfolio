@@ -9,7 +9,7 @@ main#home {
     // logo spinning animation
     .logo {
       max-height: 40vmin;
-      cursor: pointer;
+      // cursor: pointer;
       z-index: 1;
       @include media('<=600px') {
         max-height: 70vmin;
@@ -27,9 +27,9 @@ main#home {
       @include media('<=600px') {
         // max-width: 30px;
       }
-      // &:hover {
-      //   animation: wiggle .06s alternate ease infinite;
-      // }
+      &:hover {
+        animation: wiggle .06s alternate ease infinite;
+      }
     }
     .bmc-btn-container {
       margin-top: 20px;
