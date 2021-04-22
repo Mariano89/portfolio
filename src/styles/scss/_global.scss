@@ -93,16 +93,23 @@ h1, h2, h3, h4 {
 
 @keyframes logo-spin {
   from {
-    transform: rotate(-30deg);
+    // transform: rotate(-30deg);
+    transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
 }
 
+@keyframes wiggle {
+  from { -webkit-transform: rotate(-15deg); }
+  to   { -webkit-transform: rotate(15deg); }
+}
+
 @keyframes stop-spin {
   to {
-    transform: rotate(-720deg);
+    // transform: rotate(-720deg);
+    transform: rotate(720deg);
   }
 }
 
