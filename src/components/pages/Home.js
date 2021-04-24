@@ -4,28 +4,16 @@ import face from '../../images/face.png';
 import beer from '../../images/modelo.png';
 
 const Home = () => {
-  // let script = document.createElement('script')
-  // script.setAttribute('data-name', 'bmc-button')
-  // script.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js'
-  // script.setAttribute('data-slug', 'marscode')
-  // script.setAttribute('data-color', '#FFDD00')
-  // script.setAttribute('data-emoji', '🍺')
-  // script.setAttribute('data-font', 'Inter')
-  // script.setAttribute('data-text', 'Buy me a beer')
-  // script.setAttribute('data-outline-color', '#000000')
-  // script.setAttribute('data-font-color', '#000000')
-  // script.setAttribute('data-coffee-color', '#ffffff')
-  // script.async = true
-  // script.onload=function(){
-  //   var evt = document.createEvent('Event');  
-  //   evt.initEvent('DOMContentLoaded', false, false);  
-  //   window.dispatchEvent(evt);
-  // }
-
-
   const faceRef = useRef();
   const scaleRef = useRef();
   const beerRef = useRef();
+
+  const toggleMenu = () => {
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.contains('is-active') ? 
+      hamburger.classList.remove('is-active') :
+      hamburger.classList.add('is-active')
+  }
 
   const animateFaceToNav = () => {
     document.querySelector('.logo-container').classList.add('shrink-face')
@@ -68,6 +56,17 @@ const Home = () => {
 
   return (
     <main id="home">
+      {/*<button className="hamburger hamburger--collapse is-active" type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+      </button>*/}
+      <div className="hamburger hamburger--arrow" onClick={toggleMenu}>
+        <div className="hamburger-box">
+          <div className="hamburger-inner"></div>
+        </div>
+      </div>
+
       <div className="logo-container">
         <div className="" ref={scaleRef}>
           <img 

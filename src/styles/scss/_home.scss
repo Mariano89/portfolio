@@ -2,6 +2,13 @@ main#home {
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
+  .hamburger {
+    position: absolute;
+    right: 0;
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      background-color: #FFDD00;
+    }
+  }
   .logo-container {
     position: absolute;
     @include centerCenter;
@@ -38,10 +45,8 @@ main#home {
       transform: translateX(-50%);
       position: absolute;
       .bmc-btn {
-        // @include media('<=600px') {
-          font-size: 20px;
-          padding: 0 16px;
-        // }
+        font-size: 20px;
+        padding: 0 16px;
       }
     }
     .stop-spin {
