@@ -1,0 +1,14 @@
+nav {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  background-color: #000;
+  z-index: 1;
+  transition-property: width;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  width: 0;
+}
+.active {
+  width: 90vw;
+}

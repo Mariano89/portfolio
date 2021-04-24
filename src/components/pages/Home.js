@@ -8,13 +8,6 @@ const Home = () => {
   const scaleRef = useRef();
   const beerRef = useRef();
 
-  const toggleMenu = () => {
-    const hamburger = document.querySelector('.hamburger');
-    hamburger.classList.contains('is-active') ? 
-      hamburger.classList.remove('is-active') :
-      hamburger.classList.add('is-active')
-  }
-
   const animateFaceToNav = () => {
     document.querySelector('.logo-container').classList.add('shrink-face')
     document.querySelector('.logo').classList.add('stop-spin')
@@ -56,17 +49,6 @@ const Home = () => {
 
   return (
     <main id="home">
-      {/*<button className="hamburger hamburger--collapse is-active" type="button">
-        <span className="hamburger-box">
-          <span className="hamburger-inner"></span>
-        </span>
-      </button>*/}
-      <div className="hamburger hamburger--arrow" onClick={toggleMenu}>
-        <div className="hamburger-box">
-          <div className="hamburger-inner"></div>
-        </div>
-      </div>
-
       <div className="logo-container">
         <div className="" ref={scaleRef}>
           <img 
