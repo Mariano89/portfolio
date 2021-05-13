@@ -64,6 +64,9 @@ const Home = () => {
             src={beer}
           />
           <div className="donate-button-container"></div>
+          <div className="projects-button-container">
+            
+          </div>
           {/*<span id="text"></span>*/}
         </div>
       </div>

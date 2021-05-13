@@ -9,11 +9,15 @@ const App = () => {
 
   return (
     <div className="app">
+        {/* 
+        display nav button only if projects or contact button are clicked
+        
         <div className="hamburger hamburger--arrow" onClick={toggleMenu}>
           <div className="hamburger-box">
             <div className="hamburger-inner"></div>
           </div>
         </div>
+        */}
         <Menu />
       <Home />
     </div>
